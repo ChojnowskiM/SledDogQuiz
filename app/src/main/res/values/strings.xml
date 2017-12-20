@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Sled Dog Quiz</string>
+    <string name="title">Sled Dogs Quiz</string>
+    <string name="start_game">Let\'s start!</string>
+    <string name="question_1">1. Put dogs in right order (drag\u0026drop)</string>
+</resources>
