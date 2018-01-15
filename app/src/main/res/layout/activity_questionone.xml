@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2016 The Android Open Source Project
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2016 The Android Open Source Project
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -9,36 +8,42 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
---><ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/question_1"/>
-        <ImageView
-            android:layout_margin="@dimen/imageMargins"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/sled"
-            android:layout_gravity="center_horizontal"
-            android:adjustViewBounds="true"/>
-<com.mobeta.android.dslv.DragSortListView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/list"
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dslv="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    dslv:drag_handle_id="@id/drag_handle"
-    dslv:float_background_color="@android:color/background_light" />
-<Button
-            android:id="@+id/next1"
-            android:onClick="firstQ"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Next"/>
-    </LinearLayout></ScrollView>
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/question_1" />
+
+    <ImageView
+        android:id="@+id/image_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/imageMargins"
+        android:adjustViewBounds="true"
+        android:src="@drawable/sled" />
+
+    <com.mobeta.android.dslv.DragSortListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/next1"
+        android:layout_below="@id/image_question"
+        dslv:drag_handle_id="@id/drag_handle"
+        dslv:float_background_color="@android:color/background_light" />
+
+    <Button
+        android:id="@+id/next1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="firstQ"
+        android:text="Next" />
+</RelativeLayout>
