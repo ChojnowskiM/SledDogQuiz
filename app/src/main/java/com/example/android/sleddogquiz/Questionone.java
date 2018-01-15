@@ -22,15 +22,20 @@ public class Questionone extends AppCompatActivity {
     }
     ArrayList<DogImage> dogImages;
     DogImagesAdapter adapter;
+    DogImage swing = new DogImage(R.drawable.swing);
+    DogImage lead = new DogImage(R.drawable.lead);
+    DogImage team = new DogImage(R.drawable.team);
+    DogImage wheel = new DogImage(R.drawable.wheel);
     private void displayListView() {
         dogImages = new ArrayList<DogImage>();
         adapter = new DogImagesAdapter(this, dogImages);
         //Create a list of images
-        dogImages.add(new DogImage(R.drawable.swing));
-        dogImages.add(new DogImage(R.drawable.lead));
-        dogImages.add(new DogImage(R.drawable.team));
-        dogImages.add(new DogImage(R.drawable.wheel));
-        DragSortListView dragSortListView = (DragSortListView) findViewById(R.id.list);
+
+        dogImages.add(swing);
+        dogImages.add(lead);
+        dogImages.add(team);
+        dogImages.add(wheel);
+        DragSortListView dragSortListView = findViewById(R.id.list);
         dragSortListView.setAdapter(adapter);
         dragSortListView.setScrollbarFadingEnabled(false);
         dragSortListView.setDropListener(new DragSortListView.DropListener() {
@@ -45,10 +50,10 @@ public class Questionone extends AppCompatActivity {
     }
 
     public void firstQ(View view) {
-        im1 = dogImages.lastIndexOf(R.drawable.wheel);
-        im2 = dogImages.indexOf(R.drawable.team);
-        im3 = dogImages.indexOf(R.drawable.swing);
-        im4 = dogImages.indexOf(R.drawable.lead);
+        im1 = dogImages.indexOf(wheel);
+        im2 = dogImages.indexOf(team);
+        im3 = dogImages.indexOf(swing);
+        im4 = dogImages.indexOf(lead);
         if (im1 == 0 && im2 == 1 && im3 == 2 && im4 == 3) {
             score += 1;
         } else {
