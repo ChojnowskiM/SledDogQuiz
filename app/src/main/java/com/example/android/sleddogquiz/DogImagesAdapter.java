@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 
+import com.mobeta.android.dslv.DragSortListView;
+
 import java.util.ArrayList;
 
 /**
@@ -26,14 +28,14 @@ public class DogImagesAdapter extends ArrayAdapter<DogImage> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Check if an existing view is being reused, otherwise inflate the view
-        View listItemView = convertView;
-        if (listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(
+        View DragSortListView = convertView;
+        if (DragSortListView == null) {
+            DragSortListView = LayoutInflater.from(getContext()).inflate(
                     R.layout.question1, parent, false);
         }
         DogImage currentDogImage = getItem(position);
-        ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
+        ImageView imageView = (ImageView) DragSortListView.findViewById(R.id.image);
         imageView.setImageResource(currentDogImage.getDogImageId());
-        return listItemView;
+        return DragSortListView;
     }
 }

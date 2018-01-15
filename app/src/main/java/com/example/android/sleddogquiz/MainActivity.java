@@ -1,6 +1,7 @@
 package com.example.android.sleddogquiz;
 
 import android.content.ClipData;
+import android.content.Intent;
 import android.media.Image;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -29,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void beginQuiz(View view) {
-        setContentView(R.layout.question1);
-
+        Intent intent = new Intent(this, Questionone.class);
+        startActivity(intent);
     }
 
     public void firstQ(View view) {

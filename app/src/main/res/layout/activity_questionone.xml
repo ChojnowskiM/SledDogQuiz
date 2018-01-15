@@ -27,19 +27,15 @@
             android:src="@drawable/sled"
             android:layout_gravity="center_horizontal"
             android:adjustViewBounds="true"/>
-        <com.jmedeisis.draglinearlayout.DragLinearLayout
-            android:id="@+id/container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-<ListView
+<com.mobeta.android.dslv.DragSortListView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/list"
-    android:orientation="vertical"
+    xmlns:dslv="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:drawSelectorOnTop="true"  />
-        </com.jmedeisis.draglinearlayout.DragLinearLayout>
-        <Button
+    dslv:drag_handle_id="@id/drag_handle"
+    dslv:float_background_color="@android:color/background_light" />
+<Button
             android:id="@+id/next1"
             android:onClick="firstQ"
             android:layout_width="wrap_content"

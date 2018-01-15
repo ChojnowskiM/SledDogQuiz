@@ -8,8 +8,8 @@ package com.jmedeisis.draglinearlayout;
 
 public final class R {
     public static final class attr {
-        public static final int placeholderView = 0x7f0200d1;
-        public static final int scrollSensitiveHeight = 0x7f0200de;
+        public static final int placeholderView = 0x7f0200dc;
+        public static final int scrollSensitiveHeight = 0x7f0200ec;
     }
     public static final class dimen {
         public static final int downwards_drop_shadow_height = 0x7f050051;
@@ -19,7 +19,7 @@ public final class R {
         public static final int ab_solid_shadow_holo_flipped = 0x7f060002;
     }
     public static final class styleable {
-        public static final int[] DragLinearLayout = { 0x7f0200d1, 0x7f0200de };
+        public static final int[] DragLinearLayout = { 0x7f0200dc, 0x7f0200ec };
         public static final int DragLinearLayout_placeholderView = 0;
         public static final int DragLinearLayout_scrollSensitiveHeight = 1;
     }

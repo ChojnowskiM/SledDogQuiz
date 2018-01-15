@@ -5,6 +5,7 @@ INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.x
 INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:1-22:12
 INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:1-22:12
 MERGED from [com.jmedeisis:draglinearlayout:1.1.0] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\draglinearlayout-1.1.0.aar\e6bcc35940d90d46a07da76edf24b6d7\AndroidManifest.xml:2:1-13:12
+MERGED from [asia.ivity.android:drag-sort-listview:1.0] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\drag-sort-listview-1.0.aar\e0324fbefba5fa9ecb109a86ab8b2f6f\AndroidManifest.xml:2:1-8:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\d4b570642aa8078026ee6cd6bc19b37b\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\f74d178049aa45a123b9f5d6c6ce8fc3\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\cb72176b45645f7c5d8809bec76cf8ab\AndroidManifest.xml:17:1-31:12
@@ -95,6 +96,8 @@ INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.x
 INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml
 MERGED from [com.jmedeisis:draglinearlayout:1.1.0] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\draglinearlayout-1.1.0.aar\e6bcc35940d90d46a07da76edf24b6d7\AndroidManifest.xml:7:5-9:41
 MERGED from [com.jmedeisis:draglinearlayout:1.1.0] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\draglinearlayout-1.1.0.aar\e6bcc35940d90d46a07da76edf24b6d7\AndroidManifest.xml:7:5-9:41
+MERGED from [asia.ivity.android:drag-sort-listview:1.0] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\drag-sort-listview-1.0.aar\e0324fbefba5fa9ecb109a86ab8b2f6f\AndroidManifest.xml:6:5-7:35
+MERGED from [asia.ivity.android:drag-sort-listview:1.0] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\drag-sort-listview-1.0.aar\e0324fbefba5fa9ecb109a86ab8b2f6f\AndroidManifest.xml:6:5-7:35
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\d4b570642aa8078026ee6cd6bc19b37b\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\d4b570642aa8078026ee6cd6bc19b37b\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\f74d178049aa45a123b9f5d6c6ce8fc3\AndroidManifest.xml:5:5-7:41
