@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:1-22:12
+ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:1-25:12
 MERGED from [com.jmedeisis:draglinearlayout:1.1.0] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\draglinearlayout-1.1.0.aar\e6bcc35940d90d46a07da76edf24b6d7\AndroidManifest.xml:2:1-13:12
 MERGED from [asia.ivity.android:drag-sort-listview:1.0] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\drag-sort-listview-1.0.aar\e0324fbefba5fa9ecb109a86ab8b2f6f\AndroidManifest.xml:2:1-8:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\d4b570642aa8078026ee6cd6bc19b37b\AndroidManifest.xml:17:1-31:12
@@ -17,25 +17,25 @@ MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Misiek\.g
 MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\6cc64dab2df8da045d5a3d6b367ed2d8\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\8264df187ac28fef657c942405c072e4\AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\42398bca92ce4529452b9edf678260c1\AndroidManifest.xml:17:1-30:12
-INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:1-25:12
 	package
 		ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:3:5-46
 		INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:1-22:12
+		ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:1-25:12
 		INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:1-22:12
+		ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:1-25:12
 		INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:5:5-20:19
+ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:5:5-23:19
 MERGED from [com.jmedeisis:draglinearlayout:1.1.0] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\draglinearlayout-1.1.0.aar\e6bcc35940d90d46a07da76edf24b6d7\AndroidManifest.xml:11:5-47
 MERGED from [com.jmedeisis:draglinearlayout:1.1.0] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\draglinearlayout-1.1.0.aar\e6bcc35940d90d46a07da76edf24b6d7\AndroidManifest.xml:11:5-47
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Misiek\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\d4b570642aa8078026ee6cd6bc19b37b\AndroidManifest.xml:25:5-29:19
@@ -87,9 +87,21 @@ ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:
 	android:name
 		ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:16:27-74
 activity#com.example.android.sleddogquiz.Questionone
-ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:19:9-58
+ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:19:9-49
 	android:name
 		ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:19:19-46
+activity#com.example.android.sleddogquiz.QuestionTwo
+ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:20:9-49
+	android:name
+		ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:20:19-46
+activity#com.example.android.sleddogquiz.QuestionThree
+ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:21:9-51
+	android:name
+		ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:21:19-48
+activity#com.example.android.sleddogquiz.QuestionsFurthers
+ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:22:9-64
+	android:name
+		ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:22:19-52
 uses-sdk
 INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml

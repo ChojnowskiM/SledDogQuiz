@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2016 The Android Open Source Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+--><ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/question_two" />
+
+    <CheckBox
+        android:id="@+id/ch1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/greyster"/>
+    <CheckBox
+        android:id="@+id/ch2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/samoyed"/>
+    <CheckBox
+        android:id="@+id/ch3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/greyhound"/>
+    <CheckBox
+        android:id="@+id/ch4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/kleekai"/>
+    <CheckBox
+        android:id="@+id/ch5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/siberian_husky"/>
+    <CheckBox
+        android:id="@+id/ch6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alaskan_malamute"/>
+    <CheckBox
+        android:id="@+id/ch7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alaskan_husky"/>
+    <CheckBox
+        android:id="@+id/ch8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/greenland"/>
+    <CheckBox
+        android:id="@+id/ch9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/eurodog"/>
+    <CheckBox
+        android:id="@+id/ch10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rottweiler"/>
+    <CheckBox
+        android:id="@+id/ch11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/norwegian_elkhound"/>
+    <CheckBox
+        android:id="@+id/ch12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/malinois"/>
+
+    <Button
+        android:id="@+id/next1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="nextQuestion"
+        android:text="@string/next" />
+</LinearLayout></ScrollView>

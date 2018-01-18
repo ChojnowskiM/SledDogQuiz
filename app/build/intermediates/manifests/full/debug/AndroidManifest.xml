@@ -25,6 +25,9 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.android.sleddogquiz.Questionone" />
+        <activity android:name="com.example.android.sleddogquiz.QuestionTwo" />
+        <activity android:name="com.example.android.sleddogquiz.QuestionThree" />
+        <activity android:name="com.example.android.sleddogquiz.QuestionsFurthers" />
 
         <meta-data
             android:name="android.support.VERSION"

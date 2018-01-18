@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="your dog"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            style="segment"/>
+        <TextView
+            style="segment"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/final_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="20" />
+        <ProgressBar
+            android:id="@+id/cds_bar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:progress="0"
+            android:max="95"/>
+        <TextView
+            style="segment"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="means"/>
+        <TextView
+            style="segment"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/score_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="points"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Restart"
+            android:onClick="restart"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quit"
+            android:onClick="quit"/>
+
+    </LinearLayout></ScrollView>
