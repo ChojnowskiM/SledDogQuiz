@@ -87,7 +87,9 @@ ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:
 	android:name
 		ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:16:27-74
 activity#com.example.android.sleddogquiz.Questionone
-ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:19:9-49
+ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:19:9-86
+	android:screenOrientation
+		ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:19:47-83
 	android:name
 		ADDED from C:\Users\Misiek\Desktop\SledDogQuiz\app\src\main\AndroidManifest.xml:19:19-46
 activity#com.example.android.sleddogquiz.QuestionTwo

@@ -24,7 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.android.sleddogquiz.Questionone" />
+        <activity
+            android:name="com.example.android.sleddogquiz.Questionone"
+            android:screenOrientation="portrait" />
         <activity android:name="com.example.android.sleddogquiz.QuestionTwo" />
         <activity android:name="com.example.android.sleddogquiz.QuestionThree" />
         <activity android:name="com.example.android.sleddogquiz.QuestionsFurthers" />
