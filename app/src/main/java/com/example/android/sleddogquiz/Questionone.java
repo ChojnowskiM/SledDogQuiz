@@ -8,10 +8,19 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.mobeta.android.dslv.DragSortListView;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class Questionone extends AppCompatActivity {
+    private static final int TIME_INTERVAL = 2000; // # milliseconds, desired time passed between two back presses.
+    ArrayList<DogImage> dogImages;
+    DogImagesAdapter adapter;
+    DogImage swing = new DogImage(R.drawable.swing);
+    DogImage lead = new DogImage(R.drawable.lead);
+    DogImage team = new DogImage(R.drawable.team);
+    DogImage wheel = new DogImage(R.drawable.wheel);
+    private long mBackPressed;
     private int score = 0;
     //images for question 1
     private int im1, im2, im3, im4;
@@ -22,12 +31,7 @@ public class Questionone extends AppCompatActivity {
         setContentView(R.layout.activity_questionone);
         displayListView();
     }
-    ArrayList<DogImage> dogImages;
-    DogImagesAdapter adapter;
-    DogImage swing = new DogImage(R.drawable.swing);
-    DogImage lead = new DogImage(R.drawable.lead);
-    DogImage team = new DogImage(R.drawable.team);
-    DogImage wheel = new DogImage(R.drawable.wheel);
+    //Displays draggable elements of ArrayList @DogImages.
     private void displayListView() {
         dogImages = new ArrayList<DogImage>();
         adapter = new DogImagesAdapter(this, dogImages);
@@ -42,7 +46,8 @@ public class Questionone extends AppCompatActivity {
         dragSortListView.setAdapter(adapter);
         dragSortListView.setScrollbarFadingEnabled(false);
         dragSortListView.setDropListener(new DragSortListView.DropListener() {
-            @Override public void drop(int from, int to) {
+            @Override
+            public void drop(int from, int to) {
                 DogImage movedItem = dogImages.get(from);
                 dogImages.remove(from);
                 if (from > to) --from;
@@ -51,7 +56,8 @@ public class Questionone extends AppCompatActivity {
             }
         });
     }
-
+    /*Returns position of each elements when user click on "next button" and adds scores.
+    */
     public void nextQuestion(View view) {
         im1 = dogImages.indexOf(wheel);
         im2 = dogImages.indexOf(team);
@@ -69,10 +75,26 @@ public class Questionone extends AppCompatActivity {
         if (im4 == 3) {
             score += 1;
         }
+        /*Returns show Toast meesage with actual scores.
+        */
         Toast toast = Toast.makeText(this, getString(R.string.scores) + score, Toast.LENGTH_SHORT);
         toast.show();
         Intent intent = new Intent(this, QuestionTwo.class);
         intent.putExtra("scores", score);
         startActivity(intent);
+        finish();
+    }
+
+    //it holds behavior for clicking back button - going to question before and decrease points.
+    public void onBackPressed() {
+
+        if (mBackPressed + TIME_INTERVAL > System.currentTimeMillis()) {
+            super.onBackPressed();
+            return;
+        } else {
+            Toast.makeText(getBaseContext(), getString(R.string.exit), Toast.LENGTH_SHORT).show();
+        }
+        mBackPressed = System.currentTimeMillis();
+
     }
 }

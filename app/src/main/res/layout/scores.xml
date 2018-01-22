@@ -1,51 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
     <LinearLayout
-        android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="your dog"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            style="segment"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
         <TextView
             style="segment"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/final_score"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="20" />
+            android:gravity="center_horizontal"
+            android:text="@string/your_points"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/final_score"
+            style="segment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="20"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
         <ProgressBar
             android:id="@+id/cds_bar2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             style="@android:style/Widget.ProgressBar.Horizontal"
-            android:progress="0"
-            android:max="95"/>
-        <TextView
-            style="segment"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="means"/>
-        <TextView
-            style="segment"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/score_desc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="points"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Restart"
-            android:onClick="restart"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Quit"
-            android:onClick="quit"/>
+            android:max="20"
+            android:progress="0" />
 
-    </LinearLayout></ScrollView>
+        <TextView
+            style="segment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/knowledge_mushing"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/score_desc"
+            style="segment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="restart"
+            android:text="@string/restart" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="quit"
+            android:text="@string/quit" />
+
+    </LinearLayout>
+</ScrollView>

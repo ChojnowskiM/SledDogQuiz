@@ -17,12 +17,13 @@ public class DogImagesAdapter extends ArrayAdapter<DogImage> {
     /**
      * Create a new {@link DogImagesAdapter} object.
      *
-     * @param context is the current context (i.e. Activity) that the adapter is being created in.
+     * @param context   is the current context (i.e. Activity) that the adapter is being created in.
      * @param dogImages is the list of {@link DogImage}s to be displayed.
      */
     public DogImagesAdapter(Context context, ArrayList<DogImage> dogImages) {
         super(context, 0, dogImages);
     }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Check if an existing view is being reused, otherwise inflate the view
@@ -32,7 +33,7 @@ public class DogImagesAdapter extends ArrayAdapter<DogImage> {
                     R.layout.question1, parent, false);
         }
         DogImage currentDogImage = getItem(position);
-        ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
+        ImageView imageView = listItemView.findViewById(R.id.image);
         imageView.setImageResource(currentDogImage.getDogImageId());
         return listItemView;
     }

@@ -1,5 +1,6 @@
 package com.example.android.sleddogquiz;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -26,18 +27,25 @@ public class QuestionsFurthers extends AppCompatActivity {
     private int questionNumber = 0;
     private long mBackPressed;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions_furthers);
         nextQ = findViewById(R.id.next);
         questionAsk = findViewById(R.id.question);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            score = extras.getInt("scores");
+        }
         rg = findViewById(R.id.q1);
         ans1 = findViewById(R.id.ans1);
         ans2 = findViewById(R.id.ans2);
         ans3 = findViewById(R.id.ans3);
         ans4 = findViewById(R.id.ans4);
         setQuestion(questionNumber);
+        String question = setQuestion(questionNumber);
+        questionAsk.setText(question);
         setAnswers(questionNumber);
         //Check saved data and returns it.
         if (savedInstanceState != null) {
@@ -52,26 +60,26 @@ public class QuestionsFurthers extends AppCompatActivity {
                 finalScore.setText(String.valueOf(score));
                 cds2.setProgress(score);
                 //Set description for given scores.
-                if (score < 8) {
-                    scoreDesc.setText("Points normal");
-                } else if (score >= 8 && score <= 23) {
-                    scoreDesc.setText("Points low");
-                } else if (score >= 24 && score <= 44) {
-                    scoreDesc.setText("Points average");
-                } else if (score >= 45) {
-                    scoreDesc.setText("Points high");
+                if (score < 5) {
+                    scoreDesc.setText(getString(R.string.mushing_poor));
+                } else if (score >= 5 && score <= 10) {
+                    scoreDesc.setText(getString(R.string.mushing_little));
+                } else if (score >= 11 && score <= 17) {
+                    scoreDesc.setText(getString(R.string.mushing_know_sth));
+                } else if (score >= 18) {
+                    scoreDesc.setText(getString(R.string.are_you_musher));
                 }
             } else {
                 //if question was with id=16 or less it will retrieve data.
-                String question = setQuestion(questionNumber);
+                question = setQuestion(questionNumber);
                 questionAsk.setText(question);
                 setAnswers(questionNumber);
-                    if (questionNumber == 4) {
-                        nextQ.setText("Result");
-                    }
+                if (questionNumber == 4) {
+                    nextQ.setText(getString(R.string.result));
                 }
             }
         }
+    }
 
     //Saving data (questions, points, etc. state).
     @Override
@@ -84,13 +92,13 @@ public class QuestionsFurthers extends AppCompatActivity {
     //it holds behavior for clicking back button - going to question before and decrease points.
     public void onBackPressed() {
 
-            if (mBackPressed + TIME_INTERVAL > System.currentTimeMillis()) {
-                super.onBackPressed();
-                return;
-            } else {
-                Toast.makeText(getBaseContext(), "tap to exit", Toast.LENGTH_SHORT).show();
-            }
-            mBackPressed = System.currentTimeMillis();
+        if (mBackPressed + TIME_INTERVAL > System.currentTimeMillis()) {
+            super.onBackPressed();
+            return;
+        } else {
+            Toast.makeText(getBaseContext(), getString(R.string.exit), Toast.LENGTH_SHORT).show();
+        }
+        mBackPressed = System.currentTimeMillis();
 
     }
 
@@ -101,20 +109,23 @@ public class QuestionsFurthers extends AppCompatActivity {
         if (rg.getCheckedRadioButtonId() == -1) {
         } else {
             //moving user to next question
+            points();
             questionNumber += 1;
             //run if it is the one before last question
             if (questionNumber >= 3) {
                 //run if it is last question, showing results
-                if (questionNumber > 4) {
-                    points();
+                if (questionNumber >= 4) {
+                    Toast toast = Toast.makeText(this, getString(R.string.scores) + score, Toast.LENGTH_SHORT);
+                    toast.show();
                     score(view);
                 } else {
                     //sets question and TextViews correctly.
                     String question = setQuestion(questionNumber);
                     questionAsk.setText(question);
                     setAnswers(questionNumber);
-                    nextQ.setText("Result");
-                    points();
+                    nextQ.setText(getString(R.string.result));
+                    Toast toast = Toast.makeText(this, getString(R.string.scores) + score, Toast.LENGTH_SHORT);
+                    toast.show();
                     rg.clearCheck();
                 }
 
@@ -123,7 +134,8 @@ public class QuestionsFurthers extends AppCompatActivity {
                 String question = setQuestion(questionNumber);
                 questionAsk.setText(question);
                 setAnswers(questionNumber);
-                points();
+                Toast toast = Toast.makeText(this, getString(R.string.scores) + score, Toast.LENGTH_SHORT);
+                toast.show();
                 rg.clearCheck();
             }
         }
@@ -138,6 +150,7 @@ public class QuestionsFurthers extends AppCompatActivity {
         question[3] = getString(R.string.rg_question_4);
         return question[questionNumber];
     }
+    //Updates texts for each radioButton
     public void setAnswers(int questionNumber) {
         String answer1 = setAnswer1(questionNumber);
         ans1.setText(answer1);
@@ -148,7 +161,8 @@ public class QuestionsFurthers extends AppCompatActivity {
         String answer4 = setAnswer4(questionNumber);
         ans4.setText(answer4);
     }
-    public String setAnswer1 (int questionNumber) {
+    //Set answers for 1st radioButton
+    public String setAnswer1(int questionNumber) {
         String[] questionAns1 = new String[4];
         questionAns1[0] = getString(R.string.left);
         questionAns1[1] = getString(R.string.Iditarod);
@@ -156,28 +170,32 @@ public class QuestionsFurthers extends AppCompatActivity {
         questionAns1[3] = getString(R.string.rig);
         return questionAns1[questionNumber];
     }
-    public String setAnswer2 (int questionNumber) {
+    //Set answers for 2nd radioButton
+    public String setAnswer2(int questionNumber) {
         String[] questionAns2 = new String[4];
         questionAns2[0] = getString(R.string.right);
-        questionAns2[0] = getString(R.string.yukon_quest);
-        questionAns2[0] = getString(R.string.alaskan_malamute);
-        questionAns2[0] = getString(R.string.bikejoring);
+        questionAns2[1] = getString(R.string.yukon_quest);
+        questionAns2[2] = getString(R.string.alaskan_malamute);
+        questionAns2[3] = getString(R.string.bikejoring);
         return questionAns2[questionNumber];
     }
-    public String setAnswer3 (int questionNumber) {
+    //Set answers for 3rd radioButton
+    public String setAnswer3(int questionNumber) {
         String[] questionAns3 = new String[4];
-        questionAns3[0] = getString(R.string.faster);;
-        questionAns3[0] = getString(R.string.all_alaska);
-        questionAns3[0] = getString(R.string.samoyed);
-        questionAns3[0] = getString(R.string.scooter);
+        questionAns3[0] = getString(R.string.faster);
+        ;
+        questionAns3[1] = getString(R.string.all_alaska);
+        questionAns3[2] = getString(R.string.samoyed);
+        questionAns3[3] = getString(R.string.scooter);
         return questionAns3[questionNumber];
     }
-    public String setAnswer4 (int questionNumber) {
+    //Set answers for 4th radioButton
+    public String setAnswer4(int questionNumber) {
         String[] questionAns4 = new String[4];
         questionAns4[0] = getString(R.string.slow_down);
-        questionAns4[0] = getString(R.string.la_prene);
-        questionAns4[0] = getString(R.string.siberian_husky);
-        questionAns4[0] = getString(R.string.canicross);
+        questionAns4[1] = getString(R.string.la_prene);
+        questionAns4[2] = getString(R.string.siberian_husky);
+        questionAns4[3] = getString(R.string.canicross);
         return questionAns4[questionNumber];
     }
 
@@ -192,32 +210,24 @@ public class QuestionsFurthers extends AppCompatActivity {
                 if (questionNumber == 0) {
                     score += 1;
                     break;
-                } else {
-                    score += 0;
                 }
                 break;
             case 1:
                 if (questionNumber == 3) {
                     score += 1;
                     break;
-                } else {
-                    score += 0;
                 }
                 break;
             case 2:
                 if (questionNumber == 1) {
                     score += 1;
                     break;
-                } else {
-                    score += 0;
                 }
                 break;
             case 3:
                 if (questionNumber == 2) {
                     score += 1;
                     break;
-                } else {
-                    score += 0;
                 }
                 break;
         }
@@ -226,16 +236,16 @@ public class QuestionsFurthers extends AppCompatActivity {
 
     //Method restarts quiz.
     public void restart(View view) {
-        Intent intent = getIntent();
-        finish();
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 
     //Method stops app.
     public void quit(View view) {
         finish();
     }
-
+    //Method displays result screen.
     public void score(View view) {
         setContentView(R.layout.scores);
         TextView finalScore = findViewById(R.id.final_score);
@@ -244,14 +254,14 @@ public class QuestionsFurthers extends AppCompatActivity {
         finalScore.setText(String.valueOf(score));
         cds2.setProgress(score);
         //Set description for given scores.
-        if (score < 8) {
-            scoreDesc.setText("Normal");
-        } else if (score >= 8 && score <= 23) {
-            scoreDesc.setText("Low");
-        } else if (score >= 24 && score <= 44) {
-            scoreDesc.setText("Average");
-        } else if (score >= 45) {
-            scoreDesc.setText("High");
+        if (score < 5) {
+            scoreDesc.setText(getString(R.string.mushing_poor));
+        } else if (score >= 5 && score <= 10) {
+            scoreDesc.setText(getString(R.string.mushing_little));
+        } else if (score >= 11 && score <= 17) {
+            scoreDesc.setText(getString(R.string.mushing_know_sth));
+        } else if (score >= 18) {
+            scoreDesc.setText(getString(R.string.are_you_musher));
         }
     }
 }

@@ -14,8 +14,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class QuestionTwo extends AppCompatActivity {
+    private static final int TIME_INTERVAL = 2000; // # milliseconds, desired time passed between two back presses.
     private int score;
     private CheckBox ch1, ch2, ch3, ch4, ch5, ch6, ch7, ch8, ch9, ch10, ch11, ch12;
+    private long mBackPressed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +68,7 @@ public class QuestionTwo extends AppCompatActivity {
         ch12.setText(breeds.get(11));
     }
 
-    public boolean findCorrectAnwer (String text) {
+    public boolean findCorrectAnwer(String text) {
         if (text.equals(getString(R.string.alaskan_husky))) {
             return true;
         } else if (text.equals(getString(R.string.alaskan_malamute))) {
@@ -81,10 +83,12 @@ public class QuestionTwo extends AppCompatActivity {
             return true;
         } else if (text.equals(getString(R.string.siberian_husky))) {
             return true;
-        } else { return false; }
+        } else {
+            return false;
+        }
     }
 
-    public int checkScores () {
+    public int checkScores() {
         if (ch1.isChecked()) {
             if (findCorrectAnwer(ch1.getText().toString())) {
                 score += 1;
@@ -179,5 +183,19 @@ public class QuestionTwo extends AppCompatActivity {
         Intent intent = new Intent(this, QuestionThree.class);
         intent.putExtra("scores", score);
         startActivity(intent);
+        finish();
+    }
+
+    //it holds behavior for clicking back button - going to question before and decrease points.
+    public void onBackPressed() {
+
+        if (mBackPressed + TIME_INTERVAL > System.currentTimeMillis()) {
+            super.onBackPressed();
+            return;
+        } else {
+            Toast.makeText(getBaseContext(), getString(R.string.exit), Toast.LENGTH_SHORT).show();
+        }
+        mBackPressed = System.currentTimeMillis();
+
     }
 }

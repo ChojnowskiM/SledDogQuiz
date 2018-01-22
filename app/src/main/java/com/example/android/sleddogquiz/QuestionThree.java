@@ -8,8 +8,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class QuestionThree extends AppCompatActivity {
-private EditText editText;
-private int score;
+    private static final int TIME_INTERVAL = 2000; // # milliseconds, desired time passed between two back presses.
+    private EditText editText;
+    private int score;
+    private long mBackPressed;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +23,7 @@ private int score;
             score = extras.getInt("scores");
         }
     }
+
     public void nextQuestion(View view) {
         if (editText.getText().toString().equals(getString(R.string.pulka)) || editText.getText().toString().equals(getString(R.string.pulka_Cap))) {
             score += 5;
@@ -29,5 +33,19 @@ private int score;
         Intent intent = new Intent(this, QuestionsFurthers.class);
         intent.putExtra("scores", score);
         startActivity(intent);
+        finish();
+    }
+
+    //it holds behavior for clicking back button - going to question before and decrease points.
+    public void onBackPressed() {
+
+        if (mBackPressed + TIME_INTERVAL > System.currentTimeMillis()) {
+            super.onBackPressed();
+            return;
+        } else {
+            Toast.makeText(getBaseContext(), getString(R.string.exit), Toast.LENGTH_SHORT).show();
+        }
+        mBackPressed = System.currentTimeMillis();
+
     }
 }

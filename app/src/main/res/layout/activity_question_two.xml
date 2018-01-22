@@ -8,85 +8,100 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
---><ScrollView android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-<LinearLayout
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_margin="@dimen/margins">
 
-    <TextView
-        android:id="@+id/question"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/question_two" />
+        android:orientation="vertical">
 
-    <CheckBox
-        android:id="@+id/ch1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/greyster"/>
-    <CheckBox
-        android:id="@+id/ch2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/samoyed"/>
-    <CheckBox
-        android:id="@+id/ch3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/greyhound"/>
-    <CheckBox
-        android:id="@+id/ch4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/kleekai"/>
-    <CheckBox
-        android:id="@+id/ch5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/siberian_husky"/>
-    <CheckBox
-        android:id="@+id/ch6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/alaskan_malamute"/>
-    <CheckBox
-        android:id="@+id/ch7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/alaskan_husky"/>
-    <CheckBox
-        android:id="@+id/ch8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/greenland"/>
-    <CheckBox
-        android:id="@+id/ch9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/eurodog"/>
-    <CheckBox
-        android:id="@+id/ch10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/rottweiler"/>
-    <CheckBox
-        android:id="@+id/ch11"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/norwegian_elkhound"/>
-    <CheckBox
-        android:id="@+id/ch12"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/malinois"/>
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question_two" />
 
-    <Button
-        android:id="@+id/next1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="nextQuestion"
-        android:text="@string/next" />
-</LinearLayout></ScrollView>
+        <CheckBox
+            android:id="@+id/ch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/greyster" />
+
+        <CheckBox
+            android:id="@+id/ch2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/samoyed" />
+
+        <CheckBox
+            android:id="@+id/ch3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/greyhound" />
+
+        <CheckBox
+            android:id="@+id/ch4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/kleekai" />
+
+        <CheckBox
+            android:id="@+id/ch5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/siberian_husky" />
+
+        <CheckBox
+            android:id="@+id/ch6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/alaskan_malamute" />
+
+        <CheckBox
+            android:id="@+id/ch7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/alaskan_husky" />
+
+        <CheckBox
+            android:id="@+id/ch8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/greenland" />
+
+        <CheckBox
+            android:id="@+id/ch9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/eurodog" />
+
+        <CheckBox
+            android:id="@+id/ch10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rottweiler" />
+
+        <CheckBox
+            android:id="@+id/ch11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/norwegian_elkhound" />
+
+        <CheckBox
+            android:id="@+id/ch12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/malinois" />
+
+        <Button
+            android:id="@+id/next1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="nextQuestion"
+            android:text="@string/next" />
+    </LinearLayout>
+</ScrollView>

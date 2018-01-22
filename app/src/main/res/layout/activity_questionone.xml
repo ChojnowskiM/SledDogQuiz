@@ -32,11 +32,11 @@
 
     <com.mobeta.android.dslv.DragSortListView
         android:id="@+id/list"
-        android:choiceMode="none"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/next1"
         android:layout_below="@id/image_question"
+        android:choiceMode="none"
         dslv:drag_handle_id="@id/drag_handle"
         dslv:float_background_color="@android:color/background_light" />
 

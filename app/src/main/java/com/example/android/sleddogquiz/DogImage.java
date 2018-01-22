@@ -7,9 +7,10 @@ package com.example.android.sleddogquiz;
 public class DogImage {
     private int mDogImageId;
 
-    public DogImage (int dogImageId) {
+    public DogImage(int dogImageId) {
         mDogImageId = dogImageId;
     }
+
     /**
      * Return the image resource ID of the word.
      */
